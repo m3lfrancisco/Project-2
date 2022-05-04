@@ -11,11 +11,13 @@
     <nav>
         <a href-="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
         <% if (user) { %>
-            <a href="/fridge" <%- title === 'My Fridge' ? 'class="active"' : '' %>>MY FRIDGE</a>
-            <a href="/fridge/new" <%- title === 'Add Food Item' ? 'class="active"' : '' %>>ADD FOOD ITEM</a>
+            <a href="/foods" <%- title === 'My Fridge' ? 'class="active"' : '' %>>MY FRIDGE</a>
+            <a href="/foods/new" <%- title === 'Add Food Item' ? 'class="active"' : '' %>>ADD FOOD ITEM</a>
             <a href="/logout">LOG OUT</a>
-            <p>Hello, <br><%= user.profile.name %></p>
+            <p>Hello, <br><%= user.name %></p>
         <% } else { %>
             <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>              
         <% } %>
     </nav>
+    <main>
+        <h1><%= title %></h1>
