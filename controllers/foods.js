@@ -41,11 +41,13 @@ function create(req, res) {
 function edit(req, res) {
     Food.findOne({_id: req.params.id}, function(err, food) {
         if (err || !food) return res.redirect('/foods');
-        res.render('foods/edit', {food});
+        res.render('foods/edit', { title: 'Edit Food', food});
     });
 };
 
 function update(req, res) {
+    const e = req.body.expiryDate
+    req.body.expiryDate = `${e.substr(5, 2)}-${e.substr(8, 2)}-${e.substr(0, 4)}`;
     Food.findOneAndUpdate(
         {_id: req.params.id},
         // update object with updated properties 
