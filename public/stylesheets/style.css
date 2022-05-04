@@ -17,3 +17,8 @@ a {
 .login img {
   height: 30px;
 }
+
+h1 {
+  text-align: center;
+  padding: 40px;
+}

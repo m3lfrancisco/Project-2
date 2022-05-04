@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<div class="input-group input-group-lg" id="new">
+    <form action="/foods" method="POST" class="form-control" align="center">
+        <label>Name:
+            <input type="text" name="name">
+        </label><br><br>
+        <label>Quantity:
+            <input type="number" name="quantity">
+        </label><br><br>
+        <label>Expiry Date:
+            <input type="date" name="expiryDate">
+        </label><br><br>
+        <button type="submit" class="btn btn-outline-success">Add Food</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>
