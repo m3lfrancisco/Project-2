@@ -6,13 +6,8 @@ const foodSchema = new Schema({
         type: String,
         required: true
     },
-    quantity: {
-        type: Number,
-        // required: true
-    },
-    expiryDate: {
-        type: Date
-    },
+    quantity: Number,
+    expiryDate: String,   
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'

@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Name: </div>
+    <div><%= food.name %></div>
+    <div>Quantity: </div>
+    <div><%= food.quantity %></div>
+    <div>Expiry Date: </div>
+    <div><%= food.expiryDate %></div>
+</section><br>
+
+<a href="/foods/<%= food._id %>/edit" class="link-warning">Edit Food</a>
+
+<form action="/foods/<%= food._id %>?_method=DELETE"
+    class="delete-form" method="POST">
+    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+</form>
+
+<%- include('../partials/footer') %>
