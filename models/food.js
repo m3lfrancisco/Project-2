@@ -19,13 +19,7 @@ const foodSchema = new Schema({
         required: true
     },
     quantity: Number,
-    expiryDate: {
-        type: String,
-        // set: function(expiryDate) {
-        //     this._expiryDate = this.expiryDate;
-        //     return expiryDate;
-        // }
-    },
+    expiryDate: String,
     comments: [commentSchema]
 }, {
     timestamps: true
