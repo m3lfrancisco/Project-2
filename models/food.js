@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const listSchema = new Schema({
+    name: String
+}, {
+    timestamps: true
+});
+
 const foodSchema = new Schema({
     name: {
         type: String,
@@ -13,8 +19,9 @@ const foodSchema = new Schema({
             this._expiryDate = this.expiryDate;
             return expiryDate;
         }
-    }
-    // list: [{type: Schema.Types.ObjectId, ref: 'List'}]
+    },
+    dateOpened: String,
+    list: [listSchema]
 }, {
     timestamps: true
 });
