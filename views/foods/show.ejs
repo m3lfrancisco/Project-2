@@ -9,11 +9,15 @@
     <div><%= food.expiryDate %></div>
 </section><br>
 
-<a href="/foods/<%= food._id %>/edit" class="link-warning">Edit Food</a>
+<a href="/foods/<%= food._id %>/edit" class="link-warning">Edit Food</a><br><br>
 
 <form action="/foods/<%= food._id %>?_method=DELETE"
     class="delete-form" method="POST">
     <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+</form><br><br>
+
+<form action="/lists/<%= food._id %>" method="POST" class="list-form">
+    <button type="submit" class="btn btn-outline-info btn-sm">Add to Grocery List</button>
 </form>
 
 <%- include('../partials/footer') %>
