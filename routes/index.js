@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Fridge Food Tracker' });
 });
 
-router.get('/auth/google', passport.authenticate(
+router.get('/', passport.authenticate(
   'google',
   { scope: ['profile', 'email'] }
 ));
