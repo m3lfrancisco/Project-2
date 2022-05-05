@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/foods', foodsRouter);
-app.use('/lists', listsRouter);
+app.use('/', listsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
