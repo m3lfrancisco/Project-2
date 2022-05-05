@@ -34,7 +34,7 @@ function create(req, res) {
     const food = new Food(req.body);
     food.save(function(err) {
         if(err) return res.render('foods/new');
-        res.redirect(`/foods/${food._id}`);
+        res.redirect('/foods');
     });
 };
 
@@ -70,4 +70,3 @@ function deleteFood(req, res) {
         });           
     });    
 };
-    

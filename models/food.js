@@ -7,11 +7,14 @@ const foodSchema = new Schema({
         required: true
     },
     quantity: Number,
-    expiryDate: String,   
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
+    expiryDate: {
+        type: String,
+        set: function(expiryDate) {
+            this._expiryDate = this.expiryDate;
+            return expiryDate;
+        }
     }
+    // list: [{type: Schema.Types.ObjectId, ref: 'List'}]
 }, {
     timestamps: true
 });

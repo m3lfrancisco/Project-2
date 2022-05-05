@@ -11,10 +11,10 @@
 <body>
     <nav class="navbar fixed-top navbar-light" style="background-color: #e3f2fd;">
         <div class="container-md">
-            <a href-="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
             <% if (user) { %>
                 <a href="/foods" <%- title === 'My Fridge' ? 'class="active"' : '' %>>MY FRIDGE</a>
                 <a href="/foods/new" <%- title === 'Add Food Item' ? 'class="active"' : '' %>>ADD FOOD ITEM</a>
+                <a href="/lists" <%- title === 'Grocery List' ? 'class="active"' : '' %>>GROCERY LIST</a>
                 <a href="/logout">LOG OUT</a>
                 <p>Hello, <br><%= user.name %></p>
             <% } else { %>
