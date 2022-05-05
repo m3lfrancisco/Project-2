@@ -4,9 +4,10 @@ const listsCtrl = require('../controllers/lists');
 
 const isLoggedIn = require('../config/auth');
 
-router.get('/lists', isLoggedIn, listsCtrl.listIndex);
-router.post('/lists/:id', isLoggedIn, listsCtrl.create);
-// router.post('/lists/:id', isLoggedIn, listsCtrl.addList);
-router.get('/lists', isLoggedIn, listsCtrl.show);
+router.get('/new', isLoggedIn, listsCtrl.new);
+router.post('/', isLoggedIn, listsCtrl.create);
+router.get('/', isLoggedIn, listsCtrl.listIndex);
+router.get('/:id', isLoggedIn, listsCtrl.show);
+router.post('/:id', isLoggedIn, listsCtrl.addToList);
 
 module.exports = router;
