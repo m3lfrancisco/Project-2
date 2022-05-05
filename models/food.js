@@ -1,6 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const commentSchema = new Schema({
+    content: {
+        type: String,
+        required: true
+    },
+    rating: {
+        type: Number
+    }
+}, {
+    timestamps: true
+});
+
 const foodSchema = new Schema({
     name: {
         type: String,
@@ -9,12 +21,12 @@ const foodSchema = new Schema({
     quantity: Number,
     expiryDate: {
         type: String,
-        set: function(expiryDate) {
-            this._expiryDate = this.expiryDate;
-            return expiryDate;
-        }
+        // set: function(expiryDate) {
+        //     this._expiryDate = this.expiryDate;
+        //     return expiryDate;
+        // }
     },
-    list: [{type: Schema.Types.ObjectId, ref: 'List'}]
+    comments: [commentSchema]
 }, {
     timestamps: true
 });

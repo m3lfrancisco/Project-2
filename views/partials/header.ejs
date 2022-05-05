@@ -15,8 +15,6 @@
             <% if (user) { %>
                 <a href="/foods" <%- title === 'My Fridge' ? 'class="active"' : '' %>>MY FRIDGE</a>
                 <a href="/foods/new" <%- title === 'Add Food Item' ? 'class="active"' : '' %>>ADD FOOD ITEM</a>
-                <a href="/lists" <%- title === 'Grocery List' ? 'class="active"' : '' %>>GROCERY LISTS</a>
-                <a href="lists/new" <%- title === 'New List' ? 'class="active"' : '' %>>NEW LIST</a>
                 <a href="/logout">LOG OUT</a>
                 <p>Hello, <br><%= user.name %></p>
             <% } else { %>
