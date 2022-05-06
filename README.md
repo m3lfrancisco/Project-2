@@ -68,6 +68,8 @@ To use the app you must first sign in, and with *Google Oauth*, you don't need t
 
 * [Trello](https://trello.com/b/LAZ5NMco/ga-seir-project-2)
 
+* [LucidChart](https://lucid.app/lucidchart/c7bf275f-a812-450b-bbe2-02f271202bf8/edit?page=0_0&invitationId=inv_13bb99ab-860a-4982-9408-e2affd971685#)
+
 * [Whimsical](https://whimsical.com/seir-project-2-wireframe-Xu6eFWxJd2vo49x2gkDSKd)
 
 ---
