@@ -1,19 +1,23 @@
 <%- include('../partials/header') %>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% foods.forEach(function(f) { %>
-            <tr>
-                <td><%= f.name %></td>
-                <td><a href="/foods/<%= f._id %>">DETAILS</a> </td>
-            </tr>
-        <% }); %>
-    </tbody>
-</table>
+<section class="container">
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Food Name</th>
+                </tr>
+            </thead><br><br>
+            <tbody>
+                <% foods.forEach(function(f) { %>
+                    <tr>
+                        <td><%= f.name %></td>
+                        <td><a href="/foods/<%= f._id %>">DETAILS</a> </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</section>
 
 <%- include('../partials/footer') %>

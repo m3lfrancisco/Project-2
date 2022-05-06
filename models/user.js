@@ -7,8 +7,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    email: String,
-    avatar: String
+    email: String
 }, {
     timestamps: true
 });

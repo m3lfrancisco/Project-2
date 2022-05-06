@@ -1,18 +1,20 @@
 <%- include('../partials/header') %>
 
-<div class="input-group input-group-lg" id="edit">
-    <form action="/foods/<%= food._id %>?_method=PUT" method="POST" class="form-control" align="center">
-        <label>Name:
-            <input type="text" name="name" value="<%= food.name %>">
-        </label><br><br>
-        <label>Quantity:
-            <input type="number" name="quantity" value="<%= food.quantity %>">
-        </label><br><br>
-        <label>Expiry Date:
-            <input type="date" name="expiryDate" value="<%= food.expiryDate %>">
-        </label><br><br>
-        <button type="submit" class="btn btn-outline-success">Edit Food</button>
-    </form>
-</div>
+<section class="container">
+    <div class="card">
+        <form action="/foods/<%= food._id %>?_method=PUT" method="POST" class="col-auto col-form-label col-form-label-lg" align="center">
+            <label>Name:
+                <input type="text" name="name" value="<%= food.name %>">
+            </label><br><br>
+            <label>Quantity:
+                <input type="number" name="quantity" value="<%= food.quantity %>">
+            </label><br><br>
+            <label>Expiry Date:
+                <input type="date" name="expiryDate" value="<%= food.expiryDate %>">
+            </label><br><br>
+            <button type="submit" class="btn btn-success">Edit Food</button>
+        </form>
+    </div>
+</section>
 
 <%- include('../partials/footer') %>

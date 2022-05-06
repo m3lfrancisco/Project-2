@@ -13,7 +13,6 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var foodsRouter = require('./routes/foods');
 var commentsRouter = require('./routes/comments');
-// const food = require('./models/food');
 
 var app = express();
 

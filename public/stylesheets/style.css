@@ -1,31 +1,89 @@
-body {
-  /* padding: 50px; */
-  height: 60em;
-  /* font-family: 'Shrikhand', cursive, Helvetica, Arial, sans-serif; */
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: medium;
-  /* background-image: url(https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80); */
-  background-image: url(https://images.unsplash.com/photo-1615224571870-e863823760fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  background-repeat: repeat;
+* {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Fredoka', sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1615224571870-e863823760fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 }
+
+a { 
+  color: #00B7FF;
+} 
 
 .login {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 6vmin;
-  margin-left: 80vmin;
 }
 
 .login img {
   height: 30px;
 }
 
+.navbar > a:hover:not(.active) {
+  color: white;
+}
+
+.navbar > a.active {
+  color: white;
+  cursor: default;
+}
+
 h1 {
   text-align: center;
-  padding: 15vmin;
+  margin: 15vmin 0 10vmin 0;
+}
+
+.card {
+  position: relative;
+  justify-content: center;
+  width: 100vmin;
+  background-color: #ffffffb8;
+  background-clip: border-box;
+  border: 2px solid rgba(0,0,0,.125);
+  border-radius: 2.25em;
+  padding: 6vmin;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1 rem 1 rem;
+}
+
+.form-control {
+  outline: none;
+  background-color: transparent;
+}
+
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  font-size: x-large;
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
+}
+
+.table {
+  font-size: large;
+}
+
+#comments { 
+  display: inline-block;
+  justify-content: space-evenly;
+} 
+
+.btn-x {
+  margin: 10px;
+  background-color: rgb(215,79,83);
+  color: white;
 }

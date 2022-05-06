@@ -61,12 +61,8 @@ function update(req, res) {
     );
 };
 
-function deleteFood(req, res) {
-    Food.findOne({'foods._id': req.params.id}).then(function(food) {
-        food.remove().then(function() {
-            res.redirect('/foods');
-        }).catch(function(err) {
-            return next(err);
-        });           
+function deleteFood(req, res, next) {
+    Food.findByIdAndRemove(req.params.id, function() {
+        res.redirect('/foods');
     });    
 };

@@ -1,71 +1,68 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
-    <div>Name: </div>
-    <div><%= food.name %></div>
-    <div>Quantity: </div>
-    <div><%= food.quantity %></div>
-    <div>Expiry Date: </div>
-    <div><%= food.expiryDate %></div>
-</section><br>
-
-<a href="/foods/<%= food._id %>/edit" class="link-warning">Edit Food</a><br><br>
-
-<form action="/foods/<%= food._id %>?_method=DELETE"
-    class="delete-form" method="POST">
-    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
-</form><br><br>
-
-<div class="input-group input-group-lg" id="newlist">
-    <form action="/foods/<%= food._id %>/comments" method="POST" class="form-control" align="center">
-        <label>Comment:
-            <input type="text" name="content">
-        </label><br><br>
-        <label>Rating:
-            <select name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>    
-        </label><br><br>
-        <button type="submit" class="btn btn-success">Add Comment</button>
-    </form>
-</div>
-
-<% if (food.comments.length) { %>
-    <table>
-        <thead>
-            <tr>
-                <td>Date</td>
-                <td>Comment</td>
-                <td>Rating</td>
-            </tr>
-        </thead>
-        <tbody>
-            <% let total = 0 %>
-            <% food.comments.forEach(function(c) { %>
-                <% total += c.rating %>
+<section class="container">
+    <div class="card">
+        <div class="card-body" id="show-page">
+            <div>Name:</div>
+            <div><%= food.name %></div>
+            <div>Quantity: </div>
+            <div><%= food.quantity %></div>
+            <div>Expiry Date: </div>
+            <div><%= food.expiryDate %></div>
+        </div>
+        <div class="d-grid gap-4 d-md-flex justify-content-md-end">
+            <form action="/foods/<%= food._id %>/edit">
+                <button type="submit" class="btn btn-warning">Edit Food</button>
+            </form><br>
+            <form action="/foods/<%= food._id %>?_method=DELETE" class="delete-form" method="POST">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form><br><br>
+        </div>
+        <div class="col-auto row g-5" id="comments">
+        <form action="/foods/<%= food._id %>/comments" method="POST" class="col-auto col-form-label col-form-label-lg" align="center">
+            <label>Comment:
+                <input type="text" name="content">
+            </label>
+            <label>Rating:
+                <select name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>    
+            </label>
+            <button type="submit" class="btn btn-success btn-sm">Add Comment</button>
+        </form>
+        </div>
+        <% if (food.comments.length) { %>
+        <table>
+            <thead>
                 <tr>
-                    <td><%= c.createdAt.toLocaleDateString() %></td>
-                    <td><%= c.content %></td>
-                    <td><%= c.rating %></td>
-                    <td>
-                        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                            <button type="submit">X</button>
-                        </form>
-                    </td>
+                    <td>Date</td>
+                    <td>Comment</td>
+                    <td>Rating</td>
                 </tr>
-            <% }); %>
-            <tr>
-                <td colspan="3"></td>
-        <td><strong><%= (total / food.comments.length).toFixed(1) %></strong></td>
-            </tr>
-        </tbody>
-    </table>
-<% } else { %>
-    <h5>No Comments Yet</h5>
-<% } %>   
+            </thead>
+            <tbody>
+                <% food.comments.forEach(function(c) { %>    
+                    <tr>
+                        <td><%= c.createdAt.toLocaleDateString() %></td>
+                        <td><%= c.content %></td>
+                        <td><%= c.rating %></td>
+                        <td>
+                            <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="btn-x">X</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <% } else { %>
+            <h5>No Comments Yet</h5>
+        <% } %>
+    </div>
+</section>
 
 <%- include('../partials/footer') %>
