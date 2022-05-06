@@ -10,14 +10,14 @@
             <div>Expiry Date: </div>
             <div><%= food.expiryDate %></div>
         </div>
-        <div class="d-grid gap-4 d-md-flex justify-content-md-end">
-            <form action="/foods/<%= food._id %>/edit">
-                <button type="submit" class="btn btn-warning">Edit Food</button>
-            </form><br>
-            <form action="/foods/<%= food._id %>?_method=DELETE" class="delete-form" method="POST">
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </form><br><br>
-        </div>
+
+        <form action="/foods/<%= food._id %>/edit" class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-warning">Edit Food</button>
+        </form><br>
+        <form action="/foods/<%= food._id %>?_method=DELETE" class="d-grid gap-2 d-md-flex justify-content-md-end" method="POST">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form><br><br>
+
         <div class="col-auto row g-5" id="comments">
         <form action="/foods/<%= food._id %>/comments" method="POST" class="col-auto col-form-label col-form-label-lg" align="center">
             <label>Comment:
@@ -35,6 +35,7 @@
             <button type="submit" class="btn btn-success btn-sm">Add Comment</button>
         </form>
         </div>
+
         <% if (food.comments.length) { %>
         <table>
             <thead>
