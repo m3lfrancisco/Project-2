@@ -48,7 +48,7 @@ Have you ever went on an impulsive grocery run or just don't have the time to ma
 
 ## Getting Started
 
-### <a href="https://fridge-food-tracker.herokuapp.com/" target="_blank">Frdige Food Tracker</a>
+### <a href="https://fridge-food-tracker.herokuapp.com/" target="_blank">Fridge Food Tracker</a>
 
 To use the app you must first sign in, and with *Google Oauth*, you don't need to sign up with an email and password. Just sign in using your existing Google account. One less username and password to keep track of. Upon signing in you will see the home page called *My Fridge*. On the top of the page you will see a NavBar and you can click on the *Add Food Item* link to get started. As you add items, you will see an overview of all the items in your fridge in your home page. If you need to make any changes or want to delete food items, click on the details link to the right of the food name and it will take you to the *Food Details* page where you can edit, delete or add comments. By having a list of all the food that you have and knowing when they will go bad, **Fridge Food Tracker** will help you reduce food waste and save money!
 
