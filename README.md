@@ -8,11 +8,11 @@ This is my second project for **General Assembly's Software Engineering Immersiv
 
 Have you ever went on an impulsive grocery run or just don't have the time to make a list and check what you've got before doing your grocery shopping? Or have you discovered a food item that you forgot that you had and by the time you find it, it's already gone bad? Well fret not, with **Fridge Food Tracker** you always know what's in your fridge, even when you're on the go!
 
-![Fridge Food Tracker Landing Page](https://imgur.com/tQdygHR)
-![Fridge Food Tracker Home Page](https://imgur.com/cJVEvcy)
-![Fridge Food Tracker Food Details Page](https://imgur.com/3fz3DwI)
-![Fridge Food Tracker Add Food Page](https://imgur.com/T04z1bL)
-![Fridge Food Tracker Edit Food Page](https://imgur.com/h8t3o8H)
+![Fridge Food Tracker Landing Page](https://imgur.com/tQdygHR.png)
+![Fridge Food Tracker Home Page](https://imgur.com/cJVEvcy.png)
+![Fridge Food Tracker Food Details Page](https://imgur.com/3fz3DwI.png)
+![Fridge Food Tracker Add Food Page](https://imgur.com/T04z1bL.png)
+![Fridge Food Tracker Edit Food Page](https://imgur.com/h8t3o8H.png)
 
 ---
 
